@@ -1,0 +1,63 @@
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+body,
+main,
+.articles {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+header,
+section,
+article,
+footer {
+    padding: 20px;
+}
+
+.blue {
+    background-color: #67B3DD;
+}
+
+.green {
+    background-color: #9EE062;
+}
+
+.yellow {
+    background-color: #FEDF6B;
+}
+
+.red {
+    background-color: #FC302D;
+}
+
+.purple,
+.pink {
+    display: none;
+}
+
+@media screen and (max-width: 767px) {
+    body {
+        padding: 10px;
+    }
+
+    header,
+    main,
+    .first-section,
+    .articles,
+    footer {
+        width: 100%;
+    }
+
+    .articles article {
+        width: 100%;
+    }
+}

@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 03</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    <h2>Task 03 - Countries</h2>
+    <button id="loadBtn" class="btn btn-success mb-3">Load Countries</button>
+    
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Country-Code</th>
+                <th>Name</th>
+            </tr>
+        </thead>
+        <tbody id="countryTableBody">
+            <!-- Dados inseridos via JS -->
+        </tbody>
+    </table>
+
+    
+    <script>
+        document.getElementById('loadBtn').addEventListener('click', () => {
+            fetch('countries.json')
+                .then(response => response.json())
+                .then(data => {
+                    const tbody = document.getElementById('countryTableBody');
+
+                    tbody.innerHTML = '';
+
+                    Object.entries(data).forEach(country => {
+                        const tr = document.createElement('tr');
+
+                        tr.innerHTML = `
+                            <td>${country[0]}</td>
+                            <td>${country[1]}</td>
+                        `;
+
+                        tbody.appendChild(tr);
+                    });
+                })
+                .catch(error => console.error('Error loading countries:', error));
+        });
+    </script>
+
+</body>
+</html>

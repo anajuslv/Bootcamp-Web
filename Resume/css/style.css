@@ -1,0 +1,282 @@
+
+/* Color palette */
+:root {
+    --navy: #101D36;
+    --blue: #2563EB;
+    --light-blue: #7DD3FC;
+    --background: #F4F7FC;
+    --white: #FFFFFF;
+    --text: #263247;
+    --muted: #64748B;
+}
+
+/* General page styles */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background);
+    color: var(--text);
+    line-height: 1.6;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--navy);
+}
+
+
+/* Header */
+header {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 24px 20px;
+}
+
+header img {
+    width: 110px;
+    height: 110px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid var(--light-blue);
+}
+
+header h1 {
+    color: var(--white);
+    font-size: 2rem;
+    margin: 10px 0 4px;
+}
+
+header p {
+    margin: 4px 0;
+}
+
+header a {
+    color: var(--light-blue);
+    text-decoration: none;
+    margin: 0 6px;
+    transition: color 0.3s ease;
+}
+
+header a:hover {
+    color: var(--white);
+}
+
+/* Navigation */
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 18px;
+
+    padding: 14px 20px;
+    background-color: var(--white);
+    box-shadow: 0 2px 8px rgba(16, 29, 54, 0.10);
+}
+
+nav a {
+    color: var(--navy);
+    text-decoration: none;
+    font-size: 0.95rem;
+    font-weight: bold;
+    padding: 6px 0;
+}
+
+nav a:hover {
+    color: var(--blue);
+    text-decoration: underline;
+}
+
+/* Resume sections */
+section {
+    background-color: var(--white);
+    padding: 28px;
+    margin-bottom: 24px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(16, 29, 54, 0.08);
+}
+
+/* Section titles */
+section h2 {
+    color: var(--blue);
+    margin-top: 0;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--light-blue);
+}
+
+/* Experience and education items */
+article {
+    margin-bottom: 24px;
+}
+
+article:last-child {
+    margin-bottom: 0;
+}
+
+article h3 {
+    margin-bottom: 4px;
+}
+
+article p {
+    margin: 4px 0;
+}
+
+/* Lists */
+li {
+    margin-bottom: 8px;
+}
+/* Links */
+a {
+    transition: color 0.3s ease;
+}
+
+/* Experience and education details */
+article h3 {
+    font-size: 1.1rem;
+}
+
+article p {
+    color: var(--muted);
+}
+
+/* Experience lists */
+article ul {
+    padding-left: 22px;
+}
+
+article li::marker {
+    color: var(--blue);
+}
+
+/* Interactive card effect */
+section {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(16, 29, 54, 0.12);
+}
+
+/* Contact form */
+form div {
+    margin-bottom: 18px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    font-weight: bold;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #CBD5E1;
+    border-radius: 6px;
+    font: inherit;
+    color: var(--text);
+    background-color: var(--white);
+}
+
+input:focus,
+textarea:focus {
+    outline: 2px solid var(--blue);
+    border-color: var(--blue);
+}
+
+button {
+    background-color: var(--blue);
+    color: var(--white);
+    border: none;
+    padding: 12px 22px;
+    border-radius: 6px;
+    font: inherit;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+button:hover {
+    background-color: var(--navy);
+    transform: translateY(-2px);
+}
+
+/* Responsive design */
+@media (max-width: 600px) {
+    header {
+        padding: 30px 15px;
+    }
+
+    header h1 {
+        font-size: 1.8rem;
+    }
+
+    header img {
+        width: 120px;
+        height: 120px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        font-size: 0.9rem;
+    }
+
+    main {
+        margin: 20px auto;
+        padding: 0 12px;
+    }
+
+    section {
+        padding: 20px;
+        margin-bottom: 16px;
+    }
+
+    section h2 {
+        font-size: 1.3rem;
+    }
+
+    article ul {
+        padding-left: 18px;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: var(--navy);
+    color: var(--white);
+    text-align: center;
+    padding: 24px 16px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 6px 0;
+}
+
+footer a {
+    color: var(--light-blue);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--white);
+    text-decoration: underline;
+}

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Task 05</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="container mt-5">
+    <h2>Task 05 - Product Search</h2>
+
+    <!-- Criação dos campos de input -->
+    <div class="row mb-3">
+        <div class="col">
+            <input type="text" id="typeInput" class="form-control" placeholder="Type">
+        </div>
+        <div class="col">
+            <input type="text" id="brandInput" class="form-control" placeholder="Brand">
+        </div>
+        <div class="col">
+            <input type="text" id="priceInput" class="form-control" placeholder="Price (e.g. >100)">
+        </div>
+        <div class="col">
+            <input type="number" id="numberInput" class="form-control" placeholder="Number">
+        </div>
+        <div class="col">
+            <button type="button" id="searchBtn" class="btn btn-primary">Search</button>
+        </div>
+    </div>
+
+    <div id="errorMsg" class="text-danger mb-3"></div>
+
+    <table class="table table-bordered">
+        <thead>
+            <tr>
+                <th>Type</th>
+                <th>Brand</th>
+                <th>Price</th>
+                <th>Number</th>
+                <th>Stock</th>
+            </tr>
+        </thead>
+        <tbody id="resultTable"></tbody>
+    </table>
+
+    <script src="task05.js"></script>
+</body>
+</html>
